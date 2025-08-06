@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("mountain.jpg") no-repeat center center/cover;
+  height: 100vh;
+  padding: 1rem;
+}
+
+#form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffffffaa;
+  color: white;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+#form:hover {
+  box-shadow: 0 0 20px #fff;
+}
+
+#title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#useandpass {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input::placeholder {
+  color: white;
+  transition: transform 0.8s ease-in-out;
+}
+
+input:focus::placeholder {
+  transform: translateY(-30px);
+  font-size: 0.9rem;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+#notac {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+#notac a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  #form {
+    padding: 1.5rem;
+  }
+
+  #title {
+    font-size: 1.7rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
